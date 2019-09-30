@@ -166,3 +166,28 @@ babel은 여러가지 방법으로 사용 가능하며, 우리가 사용 할 방
 	npm install nodemon -D 
     해주면 package.json에 해당 nodemon이 설치가 된 것이 표시가 되게 된다. 
     
+이 방법을 통해서 우리는 서버를 수동적으로 키고 끄는걸 안해도 되지만, 문제가 babel이 코드를 변환 하는 사이에 서버의 재시작이 더 빠르게 이뤄져서 정확히 코드를 못읽는 사태가 발생한다.
+
+이 오류를 고치기 위해서 우리는 package.json에 
+
+	"scripts":{"start":"nodemon --exec babel-node index.js --delay 2"}
+    
+    --delay 2 딜레이 2초를 해준다.
+    
+#### Express core: Middlewaes.
+
+Express의 middleware란 웹사이트에 접속 이후 index.js파일을 실행하고 우리의 application이 route가 존재하는지 살펴보는데, 
+
+그럼 우리가 작성한 코딩에서 
+
+	app.get("/", handleHome); (/)home을 찾고, handleHome 함수를 실행 할 것이다.
+    
+그럼 handleHome은 응답을 해주는데, 바로 그전에 home과 함수 사이에 미들웨이가 존재하게 된다.
+
+즉, 접속 이후 route 실행 이전에 미들웨이가 위치하게 되며, 그 미들웨어는 모든 함수들이 될 수 있다.
+
+예를들자면 유저의 로그인을 체크하거나, 접속 되는 log들을 작성하는 미들웨어를 만들수도 있다. 
+
+사용 방법은 밑에 이미지 처럼 사용되고, 저 위치에 미들웨어가 있다면 /home, /profile route 기능 이전에 미들웨어 먼저 동작하게 된다.
+
+![middleware](img/middleware.png)
