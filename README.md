@@ -135,3 +135,34 @@ Node.js를 쓰는 이유는 무엇일까?
 허나 이 이미지 속 작업방식과 다르게 실제로는 완전한 html,css 파일을 send 해줘야하며, 앞으로 우리가 배울 것이다.
 
 즉, 서버를 생성 -> route를 생성 -> 응답(res) 하는 방식.
+
+#### ES6 on NodeJS Using Babel
+
+##### Babel
+
+Babel은 최신의 Javascript 코드를 아주 무난한 예전의 Javascript 코드로 변환해 준다.
+
+babel은 여러가지 방법으로 사용 가능하며, 우리가 사용 할 방법은 babel node다.
+
+이 변환을 써주기 위해서 3가지 설치를 해준다.
+
+	1. npm install @babel/node
+	2. npm install @babel/core
+	3. npm install @babel/preset-env
+
+그 이후 우리는 .babelrc 파일을 만들어주고 이 파일에 우리가 원하는 node.js와 js를 필요에 의해서 넣을 것이다.
+
+즉, babel 넌 이런 preset을 가질 것이라 설정 해주는 것이다.
+
+또한 기본 함수를 arrow function 방식으로 변환이 가능하게 된다.
+
+
+##### 번외
+
+우리는 수동으로 서버를 켜고 끄는건 별로 좋은 방법이 아니기에 nodemon 이라는 package를 설치 한다.
+
+허나 이건 프로젝트를 위하기 보단 프로그래머를 위한 설정이기에 dependency에 포함 시키기 보단. 이 밖에 따로 설치 해주는게 좋다.
+
+	npm install nodemon -D 
+    해주면 package.json에 해당 nodemon이 설치가 된 것이 표시가 되게 된다. 
+    
