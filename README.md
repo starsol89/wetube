@@ -191,3 +191,14 @@ Express의 middleware란 웹사이트에 접속 이후 index.js파일을 실행�
 사용 방법은 밑에 이미지 처럼 사용되고, 저 위치에 미들웨어가 있다면 /home, /profile route 기능 이전에 미들웨어 먼저 동작하게 된다.
 
 ![middleware](img/middleware.png)
+
+또한 우리는 추가적으로 middleware에 포함 된 다양한 기능들을 쓸 것인데, 그중에서도 밑에 이미지에 보이는 것 처럼 
+
+1. morgan
+2. helmet
+3. body-parser
+4. cookie-parser
+
+를 사용 할 것이다.
+
+![middleware2](img/middleware2.png)
