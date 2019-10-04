@@ -202,3 +202,41 @@ Express의 middleware란 웹사이트에 접속 이후 index.js파일을 실행�
 를 사용 할 것이다.
 
 ![middleware2](img/middleware2.png)
+
+#### Express Core: Routing
+
+우리가 routing을 하기 전에 이해 해야할 것이 있다. 우선 프로젝트를 진행할때 다양한 방법으로 작업을 진행 하겠습니다.
+
+대체적으로 또는 내가 이해하기론 동작들을 하나 하나 쪼개서 정리하는게 참 편리하고 좋다고 생각한다. 
+
+지금 하는 작업들도 하나로 묶어서 코드를 작성해도 되지만, 작은 조각으로 쪼개 놓으면 수정 할때나 다양한 파일에서 모듈을 가져다 쓸때 더 기능적이고 편하다. 
+
+예를들면 우리는 init.js를 만들기 전에 index.js 안에 두고 init.js 코드와 app 기능 등등 같이 묶어서 쓰고 있었다. 
+
+이렇게 쓰면 한 곳에 너무 많은 코드가 길게 늘어져 있을 뿐 아니라 가독성이 너무 떨어진다. 
+
+그래서 이미지에 보이는거 처럼 init.js를 만들어서 나두고, index.js는 app.js로 바꿔서 관련 app만 관리하게 둔다. 
+
+또한 이렇게 관리하기 위해서 app.js에서 ES6 기능인 모듈을 이용해 init.js import 해준다. 
+
+app.js에서 export default app; 이후 init.js에서 import app from "./app";  해준다는 것이다.
+
+이 내용을 정리하자면 이 밑에 이미지와 같다.
+
+![appjs](img/appjs.png)
+
+![initjs](img/initjs.png)
+
+![routerjs](img/routerjs.png)
+
+다시 한번 간단히 설명하자면, 가독성 및 편의성을 위해서 프로젝트의 코드를 쪼개는게 좋은데, 이번 챕터에서 init.js를 만들고
+
+index.js를 app.js로 바꿔준 이후 app.js에서 ES6 기능인 모듈을 이용해서 다른 파일의 object를 이용 할 수 있는데, 우리는 app.js object를 사용 할 것이다. 
+
+그러므로 app.js에 export default app;(ES6 모듈 기능을 이용 하기 위한 코딩) 해주고, init.js에서 import해준다. 
+
+또한 이제는 router.js를 만들어서 route들의 복잡함을 쪼개 줄 것이고 이것은 주소창을 세분화 하고 해당 주소에 작성되고 동작하게 코딩한 것들을 웹사이트에 띄어주는 역활을 한다. 
+
+가령 /user 주소창으로 이동 했을때 나오는 유저 관련 정보가 웹사이트에 보여지면, /user/edit 으로 이동해서 유저 정보 관련을 수정 할 수도 있다. 
+
+즉, 주소창 이름을 좀 더 직관적으로 만들고 그에 맞춰서 기능들도 한곳에 다 모아두는 것이 아니라 나눠서 세분화 시킨다고 보면 된다.
