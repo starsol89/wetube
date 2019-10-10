@@ -240,3 +240,35 @@ index.js를 app.js로 바꿔준 이후 app.js에서 ES6 기능인 모듈을 이�
 가령 /user 주소창으로 이동 했을때 나오는 유저 관련 정보가 웹사이트에 보여지면, /user/edit 으로 이동해서 유저 정보 관련을 수정 할 수도 있다. 
 
 즉, 주소창 이름을 좀 더 직관적으로 만들고 그에 맞춰서 기능들도 한곳에 다 모아두는 것이 아니라 나눠서 세분화 시킨다고 보면 된다.
+
+#### MVC Pattern
+
+Model - 데이터를 의미한다. 즉, 데이터베이스
+
+View - 데이터가 어떡게 생겼는지 (template)
+
+Control - 데이터를 보여주는 또는 찾는 함수를 의미한다.
+
+이 MVC 패턴은 일종의 구조라고 이해하면 된다.
+
+우선적으로 우리는 그전과 다르게 routes.js 파일을 만들고 그 안에 사용할 URL들을 보이는 이미지 처럼 작성한다.
+
+물론 다 작성한 이후에는 쓰기 위해서 ES6 기능인 모듈을 이용해 다른 파일에서 이용 할 수 있게 해준다.
+
+![mvcpattern1](img/mvcpattern1.png)
+
+그리고 난 후 우리는 routers 폴더에 들어있는 Router들이 좀 더 세분화로 구분 되게 작성해주고, Controller 폴더에 각각의 Controller.js를 만들어서 함수를 작동 시켜준다. 
+
+이미지들은 위 라우터 부터 컨트롤러 순서에 맞게 보여지는 것이다.
+
+![mvcpattern2](img/mvcpattern2.png)
+
+![mvcpattern3](img/mvcpattern3.png)
+
+![mvcpattern4](img/mvcpattern4.png)
+
+![mvcpattern5](img/mvcpattern5.png)
+
+그럼 이렇게 세세하게 나눠주는 건 왜 그런걸 걸까?
+
+좀 더 구조적으로 그리고 세분화 해서 유지 보수에 용이하게 할 뿐만 아니라, 어떠한 문제가 생겼을때 다양하게 손봐야하는 어려움을 최대한 줄 일 수 있다. 
