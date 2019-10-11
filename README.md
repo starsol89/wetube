@@ -272,3 +272,33 @@ Control - 데이터를 보여주는 또는 찾는 함수를 의미한다.
 그럼 이렇게 세세하게 나눠주는 건 왜 그런걸 걸까?
 
 좀 더 구조적으로 그리고 세분화 해서 유지 보수에 용이하게 할 뿐만 아니라, 어떠한 문제가 생겼을때 다양하게 손봐야하는 어려움을 최대한 줄 일 수 있다. 
+
+#### 요약
+
+우리는 init.js 에는 app.js에서 import 한 application이 있고, application 관련 코드들은 app.js 파일에 담겨 있다.
+
+그리고 express를 import 했고, express를 실행한 결과를 app 상수로 만들었다. 
+
+또한 middleware들을 추가해줬음.
+
+app.js에서 cookieParser는 cookie를 전달받아서 사용할 수 있도록 만들어주는 미들웨어고, 사용자 인증 같은 곳에서 쿠키를 검사 할 때 사용해준다.
+
+app.js에서 bodyParser는 사용자가 웹사이트로 전달하는 정보들을 검사하는 미들웨어다. requsest 정보에서 form이나 json 형태로 된 body를 검사한다.
+
+즉, 아바타의 사진이나 비디오를 업로드 할 때, 제목이나 댓글 같은 정보를 전달할때 form에 담아서 업로드 해야 한다.
+
+app.js에서 helmet 미들웨어는 application이 더 안전하도록 만들어준다.
+
+app.js에서 morgan 미들웨어의 역활은 application에서 발생하는 모든 일들을 logging 하는 것.
+
+그리고 app.js에서 3가지의 router를 사용하고 그 중 globalRouter 안에는 /home, /search, /join, /login, /logout URL이 담겨 있고, 
+
+userRouter and videoRouter 두가지도 각각의 관련 된 URL 주소들을 지니고 있다.
+
+이 주소들은 routes.js에 정의해 뒀으며, 한 파일이 바뀌면 모두 적용되도록 할 수 있게 만들었다.
+
+마지막으로 모든 router의 로직들은 모두 userController나 videoController에 정의되어 있다. 
+
+즉, 모두 함수들이고 이곳에서 HTML, CSS 들을 리턴해 줄 수 있다.
+
+이곳이 우리가 분류한 MVC 패턴에서 C에 해당하는 Control 부분이다.
