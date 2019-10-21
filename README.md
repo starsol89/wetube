@@ -302,3 +302,7 @@ userRouter and videoRouter 두가지도 각각의 관련 된 URL 주소들을 �
 즉, 모두 함수들이고 이곳에서 HTML, CSS 들을 리턴해 줄 수 있다.
 
 이곳이 우리가 분류한 MVC 패턴에서 C에 해당하는 Control 부분이다.
+
+##### Pug 대하여
+
+pug는 view engine이며, template언어 이고, html 파일들을 더 보기 편하고 쉽게 이해하게 만들어준다.
