@@ -386,7 +386,7 @@ pug가 html에 보다 좋고 편리한 이유는 반복되는 작업은 따로 �
 
 밑에 이미지와 같다.
 
-![pagetitle](img/pagetitle.pug)
+![pagetitle](img/pagetitle.png)
 
 res.render("home", { pageTitle: "Home" });
 
@@ -394,4 +394,4 @@ res.render("home", { pageTitle: "Home" });
 
 고로 템플렛에 작성해서 사용하는 법은 밑에 이미지 처럼 사용하면 된다.
 
-![pagetitle2](img/pagetitle2.pug)
+![pagetitle2](img/pagetitle2.png)
