@@ -402,10 +402,10 @@ res.render("home", { pageTitle: "Home" });
 
 그 방법으로는
 
-![search1](img/search1.pug)
+![search1](img/search1.png)
 
-![search3](img/search3.pug)
+![search3](img/search3.png)
 
-![search2](img/search2.pug)
+![search2](img/search2.png)
 
 이러한 방법이 있다.
