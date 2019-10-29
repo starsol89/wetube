@@ -304,7 +304,7 @@ userRouter and videoRouter 두가지도 각각의 관련 된 URL 주소들을 �
 이곳이 우리가 분류한 MVC 패턴에서 C에 해당하는 Control 부분이다.
 
 
-##### Pug 대하여
+#### Pug 대하여
 
 pug는 view engine이며, template언어 이고, html 파일들을 더 보기 편하고 쉽게 이해하게 만들어준다.
 
@@ -395,3 +395,17 @@ res.render("home", { pageTitle: "Home" });
 고로 템플렛에 작성해서 사용하는 법은 밑에 이미지 처럼 사용하면 된다.
 
 ![pagetitle2](img/pagetitle2.png)
+
+#### Search Controller(검색한 단어나 명칭이 홈페이지 화면 안에서 보여지게 만드는 법)
+
+우리는 검색 기능을 통해서 주소창과 홈페이지에 내가 사용한 명칭이나 단어들을 확인 할 수 있다.
+
+그 방법으로는
+
+![search1](img/search1.pug)
+
+![search3](img/search3.pug)
+
+![search2](img/search2.pug)
+
+이러한 방법이 있다.
