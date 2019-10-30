@@ -421,3 +421,13 @@ res.render("home", { pageTitle: "Home" });
 ![social3](img/social3.png)
 
 이렇게 된다.
+
+#### 데이터베이스를 이용해서 템플릿에 사용하는 법
+
+우선 아직은 가짜 데이터베이스를 이용해서 만들었다. 하지만 실제 데이터를 이용하는 법도 같다.
+
+![deta1](img/deta1.png)
+
+![deta2](img/deta2.png)
+
+이렇게 사용이 가능하다.
