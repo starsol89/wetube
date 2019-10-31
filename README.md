@@ -431,3 +431,13 @@ res.render("home", { pageTitle: "Home" });
 ![deta2](img/deta2.png)
 
 이렇게 사용이 가능하다.
+
+#### mixin을 이용해서 다른정보, 같은구조를 지닌 html 만드는법
+
+mixin는 웹사이트에서 자주 반복되는 html 코드를 담고 있다.
+
+![mixin1](img/mixin1.png)
+
+![mixin2](img/mixin2.png)
+
+기억하자.
