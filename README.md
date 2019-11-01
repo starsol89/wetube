@@ -441,3 +441,50 @@ mixin는 웹사이트에서 자주 반복되는 html 코드를 담고 있다.
 ![mixin2](img/mixin2.png)
 
 기억하자.
+
+#### 동영상 검색, join 이후 로그인 후 home 이동하는 법
+
+우선 우리가 검색을 통해 영상을 검색하면 해당 영상만 들어내게 하는 법은
+
+videoController.js 에 res.render("search", { pageTitle: "Search", searchingBy, videos }); 
+
+이 코드 끝에 videos를 추가 해줌으로 써 mixin을 이용해서 Search.pug에서도 사용을 하는걸 알 수 있다.
+
+즉, 검색을 했을때 해당 데이터베이스로 가서 검색한 명칭과 같은게 있다면 찾아내서 페이지에 보이게 해주는 것이다.
+
+![search4](img/search4.png)
+
+또 우리는 회원가입 시 정보를 입력하는데 join을 누르면 /join 경로로 post 하기 위한 설정이나 코드가 없기에 join되지 않는데, 이것을 해결 하기 위해서 
+
+1. Route.js에 postjoin 이동경로를 만들어 준다.
+2. Controller.js에 postjoin 함수를 만들어 준다.
+
+즉, 우리는 globalRouter.js에 postjoin 경로를 만들고 그걸 통해 Controller.js로 이동해서 postjoin 함수가 동작하게 된다.
+
+
+라우터에 코드는 globalRouter.post(routes.join, postJoin) 이 될 것이고, 
+
+컨트롤에서는 
+
+	export const postJoin = (req, res) => {
+        const {
+            body: { name, email, password, password2 }
+        } = req;
+        if(password !== password2) {
+          res.status(400);
+          res.render("join", { pageTitle: "Join" });
+        } else {
+        res.redirect(routes.home);
+        
+       }
+     };
+     
+이런 코드가 작성 될 것이다.
+
+풀어보면 body에 이런 요청을 통해서 form 형태로 받아지고 그 받은 정보 중 패스워드 두개를 비교해서 틀리면 400 상태코드 발동 해서 잘못 된 요청을 표기해준다. 
+
+틀리리 않았으면 home 페이지를 로그인 후에 가준다.
+
+여기서 app.js에 bodyParser 미들웨어가 존재 하지 않는다면, 내가 입력한 정보가 form 형태로 받아지지 않게 된다. 
+
+그러니 꼭 기억해 두자.
