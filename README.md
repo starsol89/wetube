@@ -488,3 +488,13 @@ videoController.js 에 res.render("search", { pageTitle: "Search", searchingBy, 
 여기서 app.js에 bodyParser 미들웨어가 존재 하지 않는다면, 내가 입력한 정보가 form 형태로 받아지지 않게 된다. 
 
 그러니 꼭 기억해 두자.
+
+#### 로그인 이후 유저 모드로 페이지 보이게 하기
+
+ ![login1](img/login1.png)
+ 
+ ![login2](img/login2.png)
+ 
+ ![login3](img/login3.png)
+
+ 다만 우리는 여기서 위에 join 처럼 get, post를 나눈다는걸 기억 해야한다.
