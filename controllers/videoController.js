@@ -18,7 +18,7 @@ export const postUpload = (req, res) => {
   const {
     body: { file, title, description }
   } = req;
-  // To Do: Upload and save video
+  // To Do: Upload and save video(비디오 업로드 및 저장)
   res.redirect(routes.videoDetail(324393));
 };
 
