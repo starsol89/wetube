@@ -498,3 +498,17 @@ videoController.js 에 res.render("search", { pageTitle: "Search", searchingBy, 
  ![login3](img/login3.png)
 
  다만 우리는 여기서 위에 join 처럼 get, post를 나눈다는걸 기억 해야한다.
+
+ ### MongoDB
+ 
+ 우리는 이제 가짜 db.js 대신에 진짜인 데이터베이스 MongoDB를 사용할 것이다.
+
+MongoDB는 NoSQL로 분류되는 데이터베이스 이다.
+
+데이터베이스는 다양하게 존재하지만, 큰 종류로 분류하면 SQL 또는 NoSQL 두가지로 나뉜다.
+
+왜 우리는 MongoDB를 사용할까? 
+
+더 적은 규칙과 더 적은 절차로 작업이 가능한 데이터베이스고, 많은 부분을 수정 할 수 있다.
+
+그리고 많은 Relationship이 필요없는 일반적인 프로젝트를 진행할때 좋은 선택이다.
