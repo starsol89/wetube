@@ -514,3 +514,15 @@ MongoDB는 NoSQL로 분류되는 데이터베이스 이다.
 그리고 많은 Relationship이 필요없는 일반적인 프로젝트를 진행할때 좋은 선택이다.
 
 MongoDB 설치 관련해서 자료 찾는중... brew를 이용한 설치와 수동으로 하는법이 있는데 다 안돼고 있음....
+
+#### dotenv 설치와 왜 사용 해야하는지에 대해서
+
+실제 Application으로 만들었을 때, 보안적인 측면을 고려해서 숨겨야 할 코드 및 파일이 존재하는데 그때 사용 된다.
+
+![dotenv1](img/dotenv1.png)
+
+![dotenv2](img/dotenv2.png)
+
+![dotenv3](img/dotenv3.png)
+
+mongodb 설치 이후에 설치 한다는걸 잊지말자.
