@@ -526,3 +526,13 @@ MongoDB 설치 관련해서 자료 찾는중... brew를 이용한 설치와 수�
 ![dotenv3](img/dotenv3.png)
 
 mongodb 설치 이후에 설치 한다는걸 잊지말자.
+
+#### MongoDB Video Model(document name And Schema)
+
+models폴더 안에 Video.js 코드
+![schema1](img/schema1.png)
+
+![schema1](img/schema2.png)
+
+init.js 코드
+![schema1](img/schema3.png)
