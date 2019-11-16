@@ -536,3 +536,19 @@ models폴더 안에 Video.js 코드
 
 init.js 코드
 ![schema1](img/schema3.png)
+
+#### ref를 통해서 Video와 Comment를 연결하는법.
+
+이번에 하는 작업은 Video를 업로드 하고 난 이후 Comment를 달 수 있게 해주는 코드 작업이다.
+
+둘의 관계를 지어줘야하는데 방법으로는
+
+![ref1](img/ref1.png)
+
+![ref2](img/ref2.png)
+
+![ref3](img/ref3.png)
+
+이러한 방법이 존재한다. 
+
+명심해야 할 것은 하나의 ref고, Comment와 다르게 좋아요나 유저를 저장하거나 할때 다른 ref를 사용 할 것이다.
