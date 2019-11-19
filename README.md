@@ -552,3 +552,17 @@ init.js 코드
 이러한 방법이 존재한다. 
 
 명심해야 할 것은 하나의 ref고, Comment와 다르게 좋아요나 유저를 저장하거나 할때 다른 ref를 사용 할 것이다.
+
+#### 영상 업로드 절차와 Multer middleware 사용법과 쓰는 이유
+
+upload 할때 우리가 원하는건 file이 아니라 loation(위치) 이다.
+
+어떠한 서버에서 있는 location인데, 내 서버 일 수도 있고, 아마존 서버 일수도 있다.
+
+![multer1](img/multer1.png)
+
+![multer2](img/multer2.png)
+
+![multer3](img/multer3.png)
+
+![multer4](img/multer4.png)
